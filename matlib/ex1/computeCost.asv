@@ -1,9 +1,0 @@
-function computeCost(X, y, theta)
-    n = length(y);
-    sum = 0;
-    for i=1:n
-        sum = sum + (theta(0)*X(0, i) + theta(1)*X(1][i] - y)^2;
-    end
-    j = sum/(2*n);
-    fprintf('j = %f', j);
-end
