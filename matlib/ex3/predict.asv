@@ -1,0 +1,10 @@
+function p = predict(Theta1, Theta2, X)
+    disp(size(Theta1));
+    disp(size(Theta2));
+    disp(size(X));
+    n = length(X(:, 1));
+    p = zeros(length(X(:, 1)), 1);
+    X1 = [ones(n, 1) X];
+    
+    
+end
