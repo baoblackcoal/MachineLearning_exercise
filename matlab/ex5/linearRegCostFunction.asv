@@ -1,0 +1,5 @@
+function [J, grad] = linearRegCostFunction(X, y, theta, lambda)
+    m = size(X, 1);
+    
+    J = (sum((X*theta-y)).^2)/(2*m);
+end

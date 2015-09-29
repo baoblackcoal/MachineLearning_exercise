@@ -1,0 +1,17 @@
+function [lambda_vec, error_train, error_val] = ...
+    validationCurve(X_poly, y, X_poly_val, yval)
+
+    lambda_all = [0 0.001 0.003 0.01 0.03 0.1 0.3 1 3 10];
+    u = length(lambda_all);
+
+    m = length(ytarin);
+    n = length(yval);
+
+    theta = trainLinearReg(X_tmp, y_tmp, lambda);
+    theta1 = [0;theta(2:end)];
+    
+    for i=1:u
+        error_train(i) = sum((X_tmp*theta - y_tmp).^2)/(2*m) + lambda*(theta1'*theta1)/(2*m);
+        error_val(i) = sum((Xval*theta - yval).^2)/(2*n);
+    end
+end
